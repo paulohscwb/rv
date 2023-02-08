@@ -22,7 +22,8 @@
 	</a-assets>
     <a-entity id="cameraRig">
       <a-camera id="head" look-controls wasd-controls position="0 1 2" cursor="rayOrigin:mouse" static-body="shape: sphere; sphereRadius: 0.001" super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els;  colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: clearedEls;" raycaster="objects: .cubo;"></a-camera>
-      <a-entity mixin="pointer" line raycaster super-hands hand-controls="hand: left"></a-entity>
+      <a-entity mixin="pointer" line raycaster super-hands hand-controls="hand: left" vive-controls="hand: right" oculus-touch-controls="hand: right"
+                 windows-motion-controls="hand: right" gearvr-controls daydream-controls oculus-go-controls></a-entity>
       <a-entity teleport-controls="cameraRig: #cameraRig; collisionEntities: [mixin='cubo'], [mixin='piso']; teleportOrigin: #head; button: grip;" hand-controls="hand: right"></a-entity>
     </a-entity>
     <!-- hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
